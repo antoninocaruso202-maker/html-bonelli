@@ -1,0 +1,181 @@
+@<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+@<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Adamina&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+
+:root{
+--primario: #FF0000;
+--backred: rgba(63,12,12,83);
+--space-sm: 16px;
+--space-md: 32px;
+--space-lr: 64px;
+--space-xl: 128px;
+--space-2xl: 256px;
+
+--font-header-h:"Abril Fatface", serif;
+--font-p:"Adamina", serif;
+
+}
+
+
+html {
+		box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-p);
+    line-height: 1.5;
+   
+
+}  
+
+header {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+header img {
+position: absolute;
+top: 0;
+left: 0;
+width:100%;
+height: 100%;
+object-fit: cover;
+z-index: 1;
+object-position: center;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    
+    
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+    width: 100%;
+    height: 100px; 
+    background-color: rgba(63, 12, 12, 0.8);
+    z-index: 2;
+}
+
+header h1 {
+    position: relative;
+    z-index: 3;
+    color: #FF0000;
+    font-family: "Abril Fatface", serif;
+   
+    font-size: clamp(40px, 10vw, 80px);
+    margin: 0; 
+    
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px; 
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap
+}
+
+
+.content:nth-child(1), .content:nth-child(3) {
+    flex-direction: row-reverse; 
+}
+
+.content_img2 img, .content_img3 img, .content_img4 img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+.content_txt p {
+   font-family:"Adamina", serif;
+   font-size: 20px;
+   
+   
+}
+.content_txt {
+    flex: 1;
+    max-width: 70ch;
+    line-height: 1.5;
+}
+
+.content_txt h2 {
+    font-family: "Abril Fatface", serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.content_txt h3 {
+    font-family: "Abril Fatface", serif;
+    font-size: 22px;
+    color: #000000;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;        
+    overflow: hidden;          
+    width: 100%;
+}
+
+footer p {
+    font-family: "Adamina",serif;
+    font-size: 34px;           
+    color: #000000;
+    max-width: 950px;         
+    text-align: center;
+    margin-bottom: 60px;       
+    line-height: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer img {
+    display: block;
+    width: 100%;               
+    height: 550px;            
+    object-fit: cover;         
+    object-position: center top;  
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 300px;
+    }
+
+    .content {
+        flex-direction: column !important; 
+        gap: 20px;
+    }
+
+    .content_img2 img, .content_img3 img, .content_img4 img {
+        max-width: 100%; 
+        height: auto;
+    }
